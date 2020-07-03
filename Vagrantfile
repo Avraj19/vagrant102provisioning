@@ -7,6 +7,7 @@ Vagrant.configure("2") do |config|
   # synced folder -- connection both ways
   # config.vm.synced_folder("path in origin folder to sync", "path in machine folder to sync")
   config.vm.synced_folder "app", "/app"
+  config.vm.synced_folder "environment", "/environment"
 
   config.vm.provision "shell", path: "environment/provision.sh"
 
